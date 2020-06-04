@@ -41,7 +41,7 @@ def monitorLog(logFile):
 def put_data(timestamp, data):
     cloudwatch_client = boto3.client('cloudwatch', region_name=region)
     cloudwatch_client.put_metric_data(
-    Namespace='QDMA/TPS',
+    Namespace='CUSTOM_NAMESPACE',
     MetricData=[
         {
             'MetricName': 'TPS',
